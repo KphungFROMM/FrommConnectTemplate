@@ -4,16 +4,15 @@ using UAManagedCore;
 using OpcUa = UAManagedCore.OpcUa;
 using FTOptix.HMIProject;
 using FTOptix.Retentivity;
-using FTOptix.NetLogic;
 using FTOptix.UI;
 using FTOptix.NativeUI;
 using FTOptix.CoreBase;
 using FTOptix.Core;
-using FTOptix.RAEtherNetIP;
-using FTOptix.OPCUAServer;
+using FTOptix.NetLogic;
+using FTOptix.System;
 #endregion
 
-public class AlarmIconLogic1 : BaseNetLogic
+public class AlarmIconLogic2 : BaseNetLogic
 {
     public override void Start()
     {

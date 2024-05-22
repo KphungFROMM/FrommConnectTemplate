@@ -220,12 +220,12 @@ Children:
     Type: BaseDataVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 1024.0
+    Value: 800.0
   - Name: Height
     Type: BaseDataVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 768.0
+    Value: 600.0
   - Name: Caption
     Type: BaseDataVariableType
     DataType: String
@@ -241,7 +241,7 @@ Children:
     - Name: Panel
       Type: NodePointer
       DataType: NodeId
-      Value: {"IdType":0,"Id":0,"Namespace":-1}
+      Value: "/Objects/FrommConnectINDPCTemplate/UI/Panels/MainPanel"
       Children:
       - Name: Kind
         Type: PropertyType

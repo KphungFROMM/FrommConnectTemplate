@@ -353,7 +353,7 @@ Children:
                   DataType: LocalizedText
                   ReferenceType: HasParameter
                   ModellingRule: Optional
-                  Value: {"LocaleId":"en-US","Text":"{0}-{1}"}
+                  Value: {"LocaleId":"en-US","Text":"{0}: {1}"}
                 - Name: ns=2;Source0
                   Type: BaseDataVariableType
                   DataType: BaseDataType
@@ -764,7 +764,7 @@ Children:
                         - Name: DynamicLink
                           Type: DynamicLink
                           DataType: NodePath
-                          Value: "../../../../../../SettingsDialog@Pointer"
+                          Value: "../../../../../../../../../../../SettingsDialog@Pointer"
                       - Name: AliasNode
                         Type: BaseDataVariableType
                         DataType: NodeId
@@ -847,15 +847,6 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "{Session}/Roles/MaintenanceRole"
-            - Name: SettingsDialog
-              Type: NodePointer
-              DataType: BaseDataType
-              Value: {"Type":17,"Body":{"IdType":0,"Id":0,"Namespace":-1}}
-              Children:
-              - Name: Kind
-                Type: PropertyType
-                DataType: NodeId
-                Value: {"IdType":0,"Id":0,"Namespace":-1}
         - Name: User
           Type: Panel
           Children:
@@ -888,7 +879,7 @@ Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "{Session}/User@BrowseName"
+                    Value: "../../../../Description/Role/RoleStatus/RoleOutput@BrowseName"
                 - Name: Pairs
                   Type: BaseObjectType
                   Children:
@@ -898,22 +889,88 @@ Children:
                     - Name: Key
                       Type: BaseDataVariableType
                       DataType: String
-                      Value: "Mario Rossi"
+                      Value: "Operator 1"
                     - Name: Value
                       Type: BaseDataVariableType
                       DataType: ResourceUri
                       Value: "ns=7;%PROJECTDIR%/Graphics/icon_operator_white.svg"
-                  - Name: Pair1
+                  - Name: Pair2
                     Type: ValueMapPair
                     Children:
                     - Name: Key
                       Type: BaseDataVariableType
                       DataType: String
-                      Value: "John Doe"
+                      Value: "Operator 2"
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: ResourceUri
+                      Value: "ns=7;%PROJECTDIR%/Graphics/icon_operator_white.svg"
+                  - Name: Pair3
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Value: "Operator 3"
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: ResourceUri
+                      Value: "ns=7;%PROJECTDIR%/Graphics/icon_operator_white.svg"
+                  - Name: Pair4
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Value: "Operator 4"
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: ResourceUri
+                      Value: "ns=7;%PROJECTDIR%/Graphics/icon_operator_white.svg"
+                  - Name: Pair5
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Value: "Maintenance"
                     - Name: Value
                       Type: BaseDataVariableType
                       DataType: ResourceUri
                       Value: "ns=7;%PROJECTDIR%/Graphics/icon_admin_white.svg"
+                  - Name: Pair6
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Value: "Engineer"
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: ResourceUri
+                      Value: "ns=7;%PROJECTDIR%/Graphics/icon_admin_white.svg"
+                  - Name: Pair7
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Value: "Administrator"
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: ResourceUri
+                      Value: "ns=7;%PROJECTDIR%/Graphics/icon_admin_white.svg"
+                  - Name: Pair8
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Type: BaseDataVariableType
+                      DataType: String
+                      Value: ""
+                    - Name: Value
+                      Type: BaseDataVariableType
+                      DataType: ResourceUri
+                      Value: "ns=7;%PROJECTDIR%/Graphics/icon_operator_white.svg"
             - Name: Width
               Type: BaseVariableType
               DataType: Size
@@ -1009,6 +1066,21 @@ Children:
                 DataType: TextHorizontalAlignment
                 ModellingRule: Optional
                 Value: 2
+            - Name: HorizontalAlignment
+              Type: BaseVariableType
+              DataType: HorizontalAlignment
+              ModellingRule: Optional
+              Value: 1
+            - Name: RightMargin
+              Type: BaseVariableType
+              DataType: Size
+              ModellingRule: Optional
+              Value: 0.0
+            - Name: VerticalAlignment
+              Type: BaseVariableType
+              DataType: VerticalAlignment
+              ModellingRule: Optional
+              Value: 2
             - Name: Role
               Type: Label
               Children:
@@ -1017,43 +1089,10 @@ Children:
                 DataType: LocalizedText
                 Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
                 Children:
-                - Name: KeyValueConverter1
-                  Type: ValueMapConverter
-                  Children:
-                  - Name: Source
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Session}/User@BrowseName"
-                  - Name: Pairs
-                    Type: BaseObjectType
-                    Children:
-                    - Name: Pair
-                      Type: ValueMapPair
-                      Children:
-                      - Name: Key
-                        Type: BaseDataVariableType
-                        DataType: String
-                        Value: "Mario Rossi"
-                      - Name: Value
-                        Type: BaseDataVariableType
-                        DataType: LocalizedText
-                        Value: {"NamespaceIndex":7,"TextId":"Operator"}
-                    - Name: Pair1
-                      Type: ValueMapPair
-                      Children:
-                      - Name: Key
-                        Type: BaseDataVariableType
-                        DataType: String
-                        Value: "Kim Phung"
-                      - Name: Value
-                        Type: BaseDataVariableType
-                        DataType: LocalizedText
-                        Value: {"NamespaceIndex":7,"TextId":"Admin"}
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../RoleStatus/RoleOutput"
               - Name: TopMargin
                 Type: BaseVariableType
                 DataType: Size
@@ -1088,27 +1127,124 @@ Children:
                 Type: BaseDataVariableType
                 DataType: Boolean
                 ModellingRule: Optional
-                Value: false
+                Value: true
               - Name: Enabled
                 Type: BaseDataVariableType
                 DataType: Boolean
                 ModellingRule: Optional
-                Value: false
-            - Name: HorizontalAlignment
-              Type: BaseVariableType
-              DataType: HorizontalAlignment
-              ModellingRule: Optional
-              Value: 1
-            - Name: RightMargin
-              Type: BaseVariableType
-              DataType: Size
-              ModellingRule: Optional
-              Value: 0.0
-            - Name: VerticalAlignment
-              Type: BaseVariableType
-              DataType: VerticalAlignment
-              ModellingRule: Optional
-              Value: 2
+                Value: true
+              - Name: RoleStatus
+                Type: NetLogic
+                Children:
+                - Name: RoleOutput
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Value: "0"
+                - Name: HasRoleAdmin
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Value: false
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Session}/Roles/AdminRole"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: HasRoleEngineer
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Value: false
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Session}/Roles/EngineerRole"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: HasRoleMaintenance
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Value: false
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Session}/Roles/MaintenanceRole"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: HasRoleOperator1
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Value: false
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Session}/Roles/Operator1Role"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: HasRoleOperator2
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Value: false
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Session}/Roles/Operator2Role"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: HasRoleOperator3
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Value: false
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Session}/Roles/Operator3Role"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: HasRoleOperator4
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Value: false
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Session}/Roles/Operator4Role"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      ModellingRule: Optional
+                      Value: 2
           - Name: Login
             Type: Button
             Children:
@@ -1165,7 +1301,7 @@ Children:
                       - Name: DynamicLink
                         Type: DynamicLink
                         DataType: NodePath
-                        Value: "../../../../../../LoginDialoag@Pointer"
+                        Value: "../../../../../../../../../../LoginDialog@Pointer"
                     - Name: AliasNode
                       Type: BaseDataVariableType
                       DataType: NodeId
@@ -1241,6 +1377,11 @@ Children:
               DataType: Size
               ModellingRule: Optional
               Value: 0.0
+            - Name: RightMargin
+              Type: BaseVariableType
+              DataType: Size
+              ModellingRule: Optional
+              Value: 0.0
           - Name: VerticalAlignment
             Type: BaseVariableType
             DataType: VerticalAlignment
@@ -1283,7 +1424,7 @@ Children:
             Type: BaseVariableType
             DataType: HorizontalAlignment
             ModellingRule: Optional
-            Value: 0
+            Value: 1
           - Name: VerticalAlignment
             Type: BaseVariableType
             DataType: VerticalAlignment
@@ -1318,7 +1459,7 @@ Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "../../../../AlarmIconLogic1/Status"
+                    Value: "../../../../AlarmIconLogic/Status"
                 - Name: Pairs
                   Type: BaseObjectType
                   Children:
@@ -1391,15 +1532,6 @@ Children:
               DataType: Size
               ModellingRule: Optional
               Value: 4.0
-          - Name: AlarmsPagePointer
-            Type: NodePointer
-            DataType: NodeId
-            Value: {"IdType":0,"Id":0,"Namespace":-1}
-            Children:
-            - Name: Kind
-              Type: PropertyType
-              DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
           - Name: Button
             Type: Button
             Children:
@@ -1485,7 +1617,7 @@ Children:
                       - Name: DynamicLink
                         Type: DynamicLink
                         DataType: NodePath
-                        Value: "../../../../../../AlarmsPagePointer@Pointer"
+                        Value: "../../../../../../../../../../AlarmsPage@Pointer"
                     - Name: AliasNode
                       Type: BaseDataVariableType
                       DataType: NodeId
@@ -1526,7 +1658,7 @@ Children:
                   Type: PropertyType
                   DataType: UInt16
                   Value: 0
-          - Name: AlarmIconLogic1
+          - Name: AlarmIconLogic
             Type: NetLogic
             Children:
             - Name: Status
@@ -1586,7 +1718,7 @@ Children:
       - Name: Panel
         Type: NodePointer
         DataType: NodeId
-        Value: {"IdType":0,"Id":0,"Namespace":-1}
+        Value: "/Objects/FrommConnectINDPCTemplate/UI/Panels/TestPanel"
         Children:
         - Name: Kind
           Type: PropertyType
@@ -1670,11 +1802,11 @@ Children:
   - Name: CompanyLogo
     Type: BaseDataVariableType
     DataType: ResourceUri
-    Value: "0"
+    Value: ""
   - Name: CompanyName
     Type: BaseDataVariableType
     DataType: String
-    Value: "0"
+    Value: ""
   - Name: TimePointer
     Type: BaseDataVariableType
     DataType: String
@@ -1683,3 +1815,46 @@ Children:
     Type: BaseDataVariableType
     DataType: String
     Value: "0"
+  - Name: LoginDialog
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":0,"Id":0,"Namespace":-1}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+  - Name: AlarmsPage
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":0,"Id":0,"Namespace":-1}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+  - Name: SettingsDialog
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":0,"Id":0,"Namespace":-1}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+- Name: TestPanel
+  Id: g=18b5b1515b6c7e998e362cff726c69be
+  Supertype: Panel
+  DisplayName: {"LocaleId":"en-US","Text":"Test Panel"}
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 300.0
+  - Name: Height
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 300.0
