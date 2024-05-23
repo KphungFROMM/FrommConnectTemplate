@@ -12,6 +12,7 @@ using FTOptix.Store;
 using FTOptix.WebUI;
 using FTOptix.AuditSigning;
 using FTOptix.DataLogger;
+using FTOptix.Alarm;
 #endregion
 
 public class LocalizedClockLogic : BaseNetLogic

@@ -10,6 +10,7 @@ using FTOptix.CoreBase;
 using FTOptix.Core;
 using FTOptix.NetLogic;
 using FTOptix.System;
+using FTOptix.Alarm;
 #endregion
 
 public class AlarmIconLogic2 : BaseNetLogic

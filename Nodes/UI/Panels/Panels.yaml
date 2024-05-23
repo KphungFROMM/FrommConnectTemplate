@@ -879,7 +879,7 @@ Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "../../../../Description/Role/RoleStatus/RoleOutput@BrowseName"
+                    Value: "../../../../Description/Role/RoleStatus/RoleOutput"
                 - Name: Pairs
                   Type: BaseObjectType
                   Children:
@@ -1617,7 +1617,7 @@ Children:
                       - Name: DynamicLink
                         Type: DynamicLink
                         DataType: NodePath
-                        Value: "../../../../../../../../../../AlarmsPage@Pointer"
+                        Value: "../../../../../../../../../../AlarmsDialog@Pointer"
                     - Name: AliasNode
                       Type: BaseDataVariableType
                       DataType: NodeId
@@ -1802,46 +1802,83 @@ Children:
   - Name: CompanyLogo
     Type: BaseDataVariableType
     DataType: ResourceUri
-    Value: ""
+    Value: "ns=7;%PROJECTDIR%/Graphics/FrommConnect Horizontal dropshadow.png"
   - Name: CompanyName
     Type: BaseDataVariableType
     DataType: String
-    Value: ""
+    Value: "FrommConnect"
   - Name: TimePointer
     Type: BaseDataVariableType
     DataType: String
     Value: "0"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/FrommConnectINDPCTemplate/NetLogic/LocalizedClockLogic/LocalizedTime"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
   - Name: DatePointer
     Type: BaseDataVariableType
     DataType: String
     Value: "0"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/FrommConnectINDPCTemplate/NetLogic/LocalizedClockLogic/LocalizedDate"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
   - Name: LoginDialog
     Type: NodePointer
     DataType: NodeId
-    Value: {"IdType":0,"Id":0,"Namespace":-1}
+    Value: "/Objects/FrommConnectINDPCTemplate/UI/Dialogs/LoginDialog"
     Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
-      Value: {"IdType":0,"Id":0,"Namespace":-1}
-  - Name: AlarmsPage
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container/Dialog"
+    - Name: NodeClass
+      Type: PropertyType
+      DataType: NodePointerNodeClass
+      ModellingRule: Optional
+      Value: 1
+  - Name: AlarmsDialog
     Type: NodePointer
     DataType: NodeId
-    Value: {"IdType":0,"Id":0,"Namespace":-1}
+    Value: "/Objects/FrommConnectINDPCTemplate/UI/Dialogs/AlarmsDialog"
     Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
       Value: {"IdType":0,"Id":0,"Namespace":-1}
+    - Name: NodeClass
+      Type: PropertyType
+      DataType: NodePointerNodeClass
+      ModellingRule: Optional
+      Value: 1
   - Name: SettingsDialog
     Type: NodePointer
     DataType: NodeId
-    Value: {"IdType":0,"Id":0,"Namespace":-1}
+    Value: "/Objects/FrommConnectINDPCTemplate/UI/Dialogs/SettingsDialog"
     Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
-      Value: {"IdType":0,"Id":0,"Namespace":-1}
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container/Dialog"
+    - Name: NodeClass
+      Type: PropertyType
+      DataType: NodePointerNodeClass
+      ModellingRule: Optional
+      Value: 1
 - Name: TestPanel
   Id: g=18b5b1515b6c7e998e362cff726c69be
   Supertype: Panel
