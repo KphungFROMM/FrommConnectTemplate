@@ -2724,7 +2724,6 @@ Children:
         ModellingRule: Optional
         Value: 1
 - File: Screens/Screens.yaml
-- File: Panels/Panels.yaml
 - File: Templates/Templates.yaml
 - File: Dialogs/Dialogs.yaml
 - File: LoginForm/LoginForm.yaml
