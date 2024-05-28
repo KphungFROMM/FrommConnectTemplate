@@ -7,19 +7,23 @@ Children:
   DisplayName: {"LocaleId":"en-US","Text":"Main"}
   ReferenceType: HasComponent
   Children:
-  - Name: ScaleLayout1
-    Type: ScaleLayout
+  - Name: Image1
+    Type: Image
     Children:
-    - Name: OriginalWidth
+    - Name: Path
       Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=7;%PROJECTDIR%/Graphics/FrommConnect Horizontal dropshadow.png"
+    - Name: Width
+      Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 300.0
-    - Name: OriginalHeight
-      Type: BaseDataVariableType
+      Value: 290.0
+    - Name: Height
+      Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 300.0
+      Value: 285.0
     - Name: HorizontalAlignment
       Type: BaseVariableType
       DataType: HorizontalAlignment
@@ -30,30 +34,3 @@ Children:
       DataType: VerticalAlignment
       ModellingRule: Optional
       Value: 3
-    - Name: Image1
-      Type: Image
-      Children:
-      - Name: Path
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=7;%PROJECTDIR%/Graphics/FrommConnect Horizontal dropshadow.png"
-      - Name: Width
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 290.0
-      - Name: Height
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 285.0
-      - Name: HorizontalAlignment
-        Type: BaseVariableType
-        DataType: HorizontalAlignment
-        ModellingRule: Optional
-        Value: 3
-      - Name: VerticalAlignment
-        Type: BaseVariableType
-        DataType: VerticalAlignment
-        ModellingRule: Optional
-        Value: 3
