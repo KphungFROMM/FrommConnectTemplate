@@ -4,4 +4,3 @@ Children:
 - Name: MenuOpenedAux
   Type: BaseDataVariableType
   DataType: Boolean
-  Value: false
